@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://fpdlo7ukdyyr"]
+
+[ext_resource type="Texture2D" uid="uid://1uujr2rd3eix" path="res://backgrounds/bkg.png" id="2_4alxd"]
+[ext_resource type="PackedScene" uid="uid://cdddfw2seuug2" path="res://casian.tscn" id="4_4alxd"]
+[ext_resource type="PackedScene" uid="uid://cscu41vnwlawt" path="res://croissant.tscn" id="5_fmc8l"]
+[ext_resource type="PackedScene" uid="uid://dme80jtulwetf" path="res://usa.tscn" id="6_fmc8l"]
+[ext_resource type="PackedScene" uid="uid://bx4acjkdktos7" path="res://button.tscn" id="7_2cues"]
+[ext_resource type="PackedScene" uid="uid://cbbk4dc08co63" path="res://cinnamonroll.tscn" id="7_by7ne"]
+[ext_resource type="PackedScene" uid="uid://dmmgpomtdnlav" path="res://crenvusti.tscn" id="7_np2ge"]
+
+[node name="Kitchen" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(579, 324.75)
+scale = Vector2(1.445, 1.4443207)
+texture = ExtResource("2_4alxd")
+
+[node name="Casian" parent="." instance=ExtResource("4_4alxd")]
+position = Vector2(357, 351)
+scale = Vector2(0.8276956, 0.82769555)
+
+[node name="croissant" parent="." instance=ExtResource("5_fmc8l")]
+position = Vector2(974, 375)
+
+[node name="cinnamonroll" parent="." instance=ExtResource("7_by7ne")]
+position = Vector2(974, 200)
+scale = Vector2(0.25, 0.25)
+
+[node name="crenvusti" parent="." instance=ExtResource("7_np2ge")]
+position = Vector2(967, 42)
+
+[node name="usa" parent="." instance=ExtResource("6_fmc8l")]
+scale = Vector2(1.3083228, 1.245245)
+
+[node name="Button" parent="." instance=ExtResource("7_2cues")]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 70.41936
+offset_bottom = 53.0

@@ -1,0 +1,290 @@
+[gd_scene load_steps=44 format=3 uid="uid://d2kudnuliv8am"]
+
+[ext_resource type="Texture2D" uid="uid://1uujr2rd3eix" path="res://backgrounds/bkg.png" id="1_gc0xh"]
+[ext_resource type="PackedScene" uid="uid://cagxkxaasrc7f" path="res://cookbook.tscn" id="2_qb2l5"]
+[ext_resource type="PackedScene" uid="uid://dme80jtulwetf" path="res://usa.tscn" id="3_i01nk"]
+[ext_resource type="Texture2D" uid="uid://cjn4nll8auqf2" path="res://bucatarim/zaharidle.png" id="4_3lvxn"]
+[ext_resource type="Texture2D" uid="uid://hq34hvg3lxhf" path="res://bucatarim/zahargol.png" id="5_ydlvh"]
+[ext_resource type="Texture2D" uid="uid://5urx2e3va5yb" path="res://bucatarim/bolgol.png" id="6_pu8us"]
+[ext_resource type="Script" uid="uid://ct8ipcbra5161" path="res://zahar.gd" id="6_s2bjb"]
+[ext_resource type="Texture2D" uid="uid://disu82m800did" path="res://bucatarim/bolfaina.png" id="7_kqwv1"]
+[ext_resource type="Texture2D" uid="uid://buyj8hkrvbe8r" path="res://bucatarim/bolou.png" id="8_kml3e"]
+[ext_resource type="Texture2D" uid="uid://dpibp5jx7q0dc" path="res://bucatarim/bolzahar.png" id="9_s2bjb"]
+[ext_resource type="Texture2D" uid="uid://b2pbimwrvfghl" path="res://bucatarim/bolplin.png" id="10_6r20b"]
+[ext_resource type="Script" uid="uid://bbfbij3ab086x" path="res://bol.gd" id="11_pu8us"]
+[ext_resource type="Texture2D" uid="uid://ci2pqop43k8d6" path="res://bucatarim/fainaidle.png" id="11_u1wgo"]
+[ext_resource type="Texture2D" uid="uid://b4gueun0ir2c8" path="res://bucatarim/fainacurge.png" id="12_wrhyr"]
+[ext_resource type="Texture2D" uid="uid://ci60fgr5mc5cd" path="res://bucatarim/fainagol.png" id="13_oaou0"]
+[ext_resource type="Texture2D" uid="uid://dwlfbd4s21elx" path="res://bucatarim/lapteidle.png" id="14_l22s3"]
+[ext_resource type="Script" uid="uid://chwy3kkxyk6hm" path="res://faina.gd" id="14_ydlvh"]
+[ext_resource type="Texture2D" uid="uid://b2agk63itfvjs" path="res://bucatarim/laptecurge.png" id="15_o02py"]
+[ext_resource type="Texture2D" uid="uid://cgm2ked5b8mrk" path="res://bucatarim/laptegol.png" id="16_k0tpy"]
+[ext_resource type="Texture2D" uid="uid://1ag475vqfv81" path="res://bucatarim/cofraginchis.png" id="17_oblce"]
+[ext_resource type="Texture2D" uid="uid://cmhd68utx4260" path="res://bucatarim/cofragplin.png" id="18_v0lod"]
+[ext_resource type="Texture2D" uid="uid://450pds38nahy" path="res://bucatarim/cofragou.png" id="19_3fr5f"]
+[ext_resource type="Script" uid="uid://djovriggaf6bh" path="res://lapte.gd" id="20_6r20b"]
+[ext_resource type="Texture2D" uid="uid://1qgdcbhjct8u" path="res://bucatarim/ou.png" id="20_pency"]
+[ext_resource type="Texture2D" uid="uid://ddadwd4pf8c4e" path="res://bucatarim/oucrack.png" id="21_velnu"]
+[ext_resource type="Script" uid="uid://bocsemvqb83tm" path="res://cofrag.gd" id="22_kml3e"]
+[ext_resource type="Texture2D" uid="uid://c64g62bvfc31f" path="res://bucatarim/cracked.png" id="22_uv6t1"]
+[ext_resource type="Script" uid="uid://cakxgu52rym7q" path="res://ou.gd" id="26_s2bjb"]
+[ext_resource type="PackedScene" uid="uid://bx4acjkdktos7" path="res://button.tscn" id="29_u1wgo"]
+[ext_resource type="Texture2D" uid="uid://c0jl7ma5plr88" path="res://backgrounds/Screenshot_2026-10-10_133034-removebg-preview.png" id="30_oaou0"]
+[ext_resource type="Script" uid="uid://qgua66mmmvon" path="res://sprite_2d_2.gd" id="30_wrhyr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7tbp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3lvxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ydlvh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xs41r"]
+size = Vector2(102.55493, 165.55293)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6eb4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_pu8us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kqwv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kml3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s2bjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6r20b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrnsq"]
+radius = 55.950592
+height = 257.71692
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tu6p5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_u1wgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wrhyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oaou0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3ggi"]
+radius = 75.8349
+height = 249.4126
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6t7cj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_l22s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o02py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_k0tpy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6760"]
+radius = 27.26123
+height = 233.66748
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6b6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_oblce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v0lod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3fr5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jwsn"]
+size = Vector2(188.13025, 118.04346)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ayxsm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_pency")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_velnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_uv6t1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0vxnk"]
+radius = 52.222168
+height = 128.54688
+
+[node name="Garden" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(596, 298)
+scale = Vector2(1.4324689, 1.4324688)
+texture = ExtResource("1_gc0xh")
+
+[node name="cookbook" parent="." instance=ExtResource("2_qb2l5")]
+position = Vector2(194, 121.00003)
+scale = Vector2(0.47342992, 0.47342995)
+
+[node name="usa" parent="." instance=ExtResource("3_i01nk")]
+rotation = -3.1415925
+scale = Vector2(1.0490075, 1.0490077)
+
+[node name="zahar" type="AnimatedSprite2D" parent="."]
+position = Vector2(688.00006, 387)
+scale = Vector2(0.6825613, 0.68256134)
+sprite_frames = SubResource("SpriteFrames_d7tbp")
+script = ExtResource("6_s2bjb")
+
+[node name="Area2D" type="Area2D" parent="zahar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zahar/Area2D"]
+position = Vector2(5.8602295, 12.453125)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_xs41r")
+
+[node name="bol" type="AnimatedSprite2D" parent="."]
+position = Vector2(553, 568)
+scale = Vector2(1.1796117, 1.1796117)
+sprite_frames = SubResource("SpriteFrames_6eb4n")
+script = ExtResource("11_pu8us")
+
+[node name="Area2D" type="Area2D" parent="bol"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bol/Area2D"]
+position = Vector2(6.781893, 9.325103)
+rotation = -1.579523
+shape = SubResource("CapsuleShape2D_xrnsq")
+
+[node name="faina" type="AnimatedSprite2D" parent="."]
+position = Vector2(458, 370.00003)
+scale = Vector2(0.5933941, 0.5933941)
+sprite_frames = SubResource("SpriteFrames_tu6p5")
+script = ExtResource("14_ydlvh")
+
+[node name="Area2D" type="Area2D" parent="faina"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="faina/Area2D"]
+shape = SubResource("CapsuleShape2D_q3ggi")
+
+[node name="lapte" type="AnimatedSprite2D" parent="."]
+position = Vector2(910, 331)
+scale = Vector2(0.51355016, 0.5135501)
+sprite_frames = SubResource("SpriteFrames_6t7cj")
+flip_h = true
+script = ExtResource("20_6r20b")
+
+[node name="Area2D" type="Area2D" parent="lapte"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lapte/Area2D"]
+position = Vector2(-1.9472295, 9.73609)
+shape = SubResource("CapsuleShape2D_d6760")
+
+[node name="cofrag" type="AnimatedSprite2D" parent="."]
+position = Vector2(1034, 357)
+scale = Vector2(0.44230768, 0.44230768)
+sprite_frames = SubResource("SpriteFrames_w6b6q")
+script = ExtResource("22_kml3e")
+
+[node name="Area2D" type="Area2D" parent="cofrag"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cofrag/Area2D"]
+position = Vector2(1.3701172, 22.369568)
+shape = SubResource("RectangleShape2D_3jwsn")
+
+[node name="ou" type="AnimatedSprite2D" parent="."]
+position = Vector2(1006, 371.00003)
+scale = Vector2(0.24893618, 0.24893618)
+sprite_frames = SubResource("SpriteFrames_ayxsm")
+script = ExtResource("26_s2bjb")
+
+[node name="Area2D" type="Area2D" parent="ou"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ou/Area2D"]
+position = Vector2(-4.0170937, -4.0172167)
+shape = SubResource("CapsuleShape2D_0vxnk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 460.0
+offset_top = 26.0
+offset_right = 522.0
+offset_bottom = 130.0
+scale = Vector2(2, 2)
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "1. Flour"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "2. Egg"
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "3. Sugar"
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "4. Milk"
+
+[node name="Button" parent="." instance=ExtResource("29_u1wgo")]
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 73.0
+offset_bottom = 41.0
+
+[node name="cinnamon" type="Sprite2D" parent="."]
+position = Vector2(139.3596, -123)
+scale = Vector2(0.3940887, 0.39408866)
+texture = ExtResource("30_oaou0")
+script = ExtResource("30_wrhyr")
+
+[connection signal="readyy" from="bol" to="cinnamon" method="_on_bol_readyy"]
+[connection signal="out" from="cofrag" to="ou" method="_on_cofrag_out"]
+[connection signal="schimbare" from="ou" to="cofrag" method="_on_ou_schimbare"]

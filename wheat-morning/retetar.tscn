@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://plq3j4sf6h0t"]
+
+[ext_resource type="Script" uid="uid://dn8cuncu6qvru" path="res://retetar.gd" id="1_2wqto"]
+[ext_resource type="Texture2D" uid="uid://negvo6plu2jy" path="res://backgrounds/1.jpeg" id="1_eb8fw"]
+
+[node name="retetar" type="Node2D"]
+script = ExtResource("1_2wqto")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(141, 74)
+scale = Vector2(0.5952381, 0.5510204)
+texture = ExtResource("1_eb8fw")

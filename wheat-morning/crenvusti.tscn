@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmmgpomtdnlav"]
+
+[ext_resource type="Script" uid="uid://dvefeongipwp5" path="res://crenvusti.gd" id="1_3alww"]
+[ext_resource type="Texture2D" uid="uid://dteqpl0xx1clj" path="res://backgrounds/Screenshot_2026-10-10_134511-removebg-preview.png" id="2_3alww"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6eo2"]
+radius = 56.0
+height = 280.0
+
+[node name="crenvusti" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_3alww")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(12.000001, 12.000001)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_d6eo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.7266839, 0.7266839)
+texture = ExtResource("2_3alww")

@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://brcjtsmu61jh7"]
+
+[ext_resource type="Script" uid="uid://6c2y06wyggy8" path="res://start.gd" id="1_qn1rc"]
+[ext_resource type="Texture2D" uid="uid://1uujr2rd3eix" path="res://backgrounds/bkg.png" id="2_qn1rc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qn1rc")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(586, 331)
+scale = Vector2(1.5395825, 1.5395824)
+texture = ExtResource("2_qn1rc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -50.5
+offset_right = 33.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Kitchen" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 67)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Kitchen"
+icon_alignment = 1
+
+[node name="Garden" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 67)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Garden"
+icon_alignment = 1
+
+[node name="Shop" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 67)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Shop"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 67)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Kitchen" to="." method="_on_kitchen_pressed"]
+[connection signal="pressed" from="VBoxContainer/Garden" to="." method="_on_garden_pressed"]
+[connection signal="pressed" from="VBoxContainer/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

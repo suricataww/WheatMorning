@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbbk4dc08co63"]
+
+[ext_resource type="Script" uid="uid://dgfcfnojondqu" path="res://cinnamonroll.gd" id="1_bvkj0"]
+[ext_resource type="Texture2D" uid="uid://c0jl7ma5plr88" path="res://backgrounds/Screenshot_2026-10-10_133034-removebg-preview.png" id="2_8qbsl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6eo2"]
+radius = 188.0
+height = 384.0
+
+[node name="cinnamonroll" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_bvkj0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_d6eo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(1.5197045, 1.5197045)
+texture = ExtResource("2_8qbsl")
