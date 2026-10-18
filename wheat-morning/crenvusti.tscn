@@ -21,3 +21,6 @@ shape = SubResource("CapsuleShape2D_d6eo2")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 scale = Vector2(0.7266839, 0.7266839)
 texture = ExtResource("2_3alww")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

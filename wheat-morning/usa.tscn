@@ -1,25 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dme80jtulwetf"]
+[gd_scene load_steps=10 format=3 uid="uid://dme80jtulwetf"]
 
 [ext_resource type="Texture2D" uid="uid://dvw8puflvjk7h" path="res://backgrounds/USA.png" id="1_tn6kf"]
+[ext_resource type="AudioStream" uid="uid://bwpc5g5lmj8gy" path="res://game_c/floraphonic-glass-knock-1-189096.mp3" id="3_11au0"]
 [ext_resource type="Script" uid="uid://g2ld21gm2mw3" path="res://usa.gd" id="4_paorp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i464"]
 size = Vector2(277, 470.00003)
-
-[sub_resource type="Animation" id="Animation_6i464"]
-resource_name = "deschidere"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(989, 237), Vector2(1219.65, 237)]
-}
 
 [sub_resource type="Animation" id="Animation_11au0"]
 length = 0.001
@@ -34,6 +20,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(989, 237)]
+}
+
+[sub_resource type="Animation" id="Animation_6i464"]
+resource_name = "deschidere"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(989, 237), Vector2(1219.65, 237)]
 }
 
 [sub_resource type="Animation" id="Animation_paorp"]
@@ -58,6 +59,9 @@ _data = {
 &"inchidere": SubResource("Animation_paorp")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11au0"]
+size = Vector2(322.74997, 499.50003)
+
 [node name="usa" type="Sprite2D"]
 modulate = Color(0.84635025, 0.84635025, 0.84635025, 0.28235295)
 position = Vector2(989, 237)
@@ -75,3 +79,15 @@ shape = SubResource("RectangleShape2D_6i464")
 libraries = {
 &"": SubResource("AnimationLibrary_paorp")
 }
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-1.375061, -13.250015)
+shape = SubResource("RectangleShape2D_11au0")
+debug_color = Color(0.9216503, 0.17725345, 0.54355454, 0.41960785)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_11au0")
+
+[connection signal="area_exited" from="Area2D2" to="." method="_on_area_2d_2_area_exited"]

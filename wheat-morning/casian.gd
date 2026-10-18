@@ -6,30 +6,35 @@ const JUMP_VELOCITY = -400.0
 
 @onready var area_2d: Area2D = $Area2D
 @onready var label: Label = $Label
+@onready var molfmolf: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	area_2d.mouse_entered.connect(_on_mouse_entered)
-	#trb conectat aici daca vr sa se intample orice cu Area2D pt ca eu scriu in Casian
 	area_2d.mouse_exited.connect(_on_mouse_exited)
 	area_2d.area_entered.connect(_on_area_entered)
-	label.text = ""  #ascunde labelul la inceput
+	label.text = "" 
 	label.modulate = Color.CHARTREUSE
 	label.add_theme_constant_override("outline_size",10);
 
 func _on_mouse_entered() -> void:
 	frame = 1
+
 func _on_mouse_exited() -> void:
 	await get_tree().create_timer(0.25).timeout
 	frame = 0
+
 func _on_area_entered(area: Area2D) -> void:
-	print("Casian area entered by: ", area.get_parent().name)
 	if area.get_parent().is_in_group("croissant"):
+		molfmolf.play()
 		play_croissant()
 	label.text = ""
 	if area.get_parent().is_in_group("cinnamonroll"):
+		molfmolf.play()
 		play_cinnamonroll()
 	if area.get_parent().is_in_group("crenvusti"):
+		molfmolf.play()
 		play_crenvusti()
+
 func play_croissant() -> void:
 	await get_tree().create_timer(0.3).timeout
 	frame = 0
@@ -44,6 +49,7 @@ func play_croissant() -> void:
 	await get_tree().create_timer(0.15).timeout
 	frame = 3
 	label.text="Mmmm, sugubat!"
+	Ordine.banuti += 7
 	
 func play_cinnamonroll() -> void:
 	await get_tree().create_timer(0.3).timeout
@@ -58,6 +64,7 @@ func play_cinnamonroll() -> void:
 	frame = 0
 	await get_tree().create_timer(0.15).timeout
 	frame = 4
+	Ordine.banuti +=10
 	
 func play_crenvusti() -> void:
 	await get_tree().create_timer(0.3).timeout
@@ -72,3 +79,4 @@ func play_crenvusti() -> void:
 	frame = 0
 	await get_tree().create_timer(0.15).timeout
 	frame = 0
+	Ordine.banuti += 7

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://brcjtsmu61jh7"]
+[gd_scene load_steps=4 format=3 uid="uid://brcjtsmu61jh7"]
 
 [ext_resource type="Script" uid="uid://6c2y06wyggy8" path="res://start.gd" id="1_qn1rc"]
 [ext_resource type="Texture2D" uid="uid://1uujr2rd3eix" path="res://backgrounds/bkg.png" id="2_qn1rc"]
+[ext_resource type="PackedScene" uid="uid://wbbtbfvfmesm" path="res://coins.tscn" id="3_1n0d2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,10 +25,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -33.5
-offset_top = -50.5
-offset_right = 33.5
-offset_bottom = 50.5
+offset_left = -200.0
+offset_top = -140.0
+offset_right = 200.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -35,6 +36,7 @@ alignment = 1
 [node name="Kitchen" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(400, 67)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "Kitchen"
 icon_alignment = 1
@@ -57,6 +59,9 @@ custom_minimum_size = Vector2(200, 67)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Quit"
+
+[node name="Label" parent="." instance=ExtResource("3_1n0d2")]
+layout_mode = 0
 
 [connection signal="pressed" from="VBoxContainer/Kitchen" to="." method="_on_kitchen_pressed"]
 [connection signal="pressed" from="VBoxContainer/Garden" to="." method="_on_garden_pressed"]

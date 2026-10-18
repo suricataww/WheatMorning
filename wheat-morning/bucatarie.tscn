@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://fpdlo7ukdyyr"]
+[gd_scene load_steps=11 format=3 uid="uid://fpdlo7ukdyyr"]
 
+[ext_resource type="Script" uid="uid://ck7w1i4iv8wyg" path="res://bucatarie.gd" id="1_r48s6"]
 [ext_resource type="Texture2D" uid="uid://1uujr2rd3eix" path="res://backgrounds/bkg.png" id="2_4alxd"]
 [ext_resource type="PackedScene" uid="uid://cdddfw2seuug2" path="res://casian.tscn" id="4_4alxd"]
 [ext_resource type="PackedScene" uid="uid://cscu41vnwlawt" path="res://croissant.tscn" id="5_fmc8l"]
@@ -7,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://bx4acjkdktos7" path="res://button.tscn" id="7_2cues"]
 [ext_resource type="PackedScene" uid="uid://cbbk4dc08co63" path="res://cinnamonroll.tscn" id="7_by7ne"]
 [ext_resource type="PackedScene" uid="uid://dmmgpomtdnlav" path="res://crenvusti.tscn" id="7_np2ge"]
+[ext_resource type="PackedScene" uid="uid://38tjatsdnric" path="res://suntcool.tscn" id="8_np2ge"]
+[ext_resource type="PackedScene" uid="uid://wbbtbfvfmesm" path="res://coins.tscn" id="9_2cues"]
 
 [node name="Kitchen" type="Node2D"]
+script = ExtResource("1_r48s6")
 
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(579, 324.75)
@@ -37,3 +41,20 @@ offset_left = 8.0
 offset_top = 10.0
 offset_right = 70.41936
 offset_bottom = 53.0
+
+[node name="suntcool" parent="." instance=ExtResource("8_np2ge")]
+visible = false
+offset_left = 484.0
+offset_top = 51.0
+offset_right = 559.0
+offset_bottom = 82.0
+
+[node name="Label" parent="." instance=ExtResource("9_2cues")]
+
+[node name="anunt" type="Label" parent="."]
+offset_left = 333.0
+offset_top = 451.0
+offset_right = 373.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0.75686276, 0, 0.12156863, 1)
+theme_override_font_sizes/font_size = 30

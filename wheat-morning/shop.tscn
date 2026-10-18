@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://ddx284nw4rv5t"]
 
-[ext_resource type="Texture2D" uid="uid://ct8pvov386xhe" path="res://bucatarim/images.jpg" id="1_6lah5"]
+[ext_resource type="Texture2D" uid="uid://1uujr2rd3eix" path="res://backgrounds/bkg.png" id="1_8kdgp"]
 [ext_resource type="Texture2D" uid="uid://dahtw8b42i27b" path="res://bucatarim/image-removebg-preview (44).png" id="2_gmb2m"]
 [ext_resource type="Script" uid="uid://bfn4tsoaavks2" path="res://vacuta.gd" id="3_8kdgp"]
 [ext_resource type="Texture2D" uid="uid://cb5jovv20rkev" path="res://bucatarim/image-removebg-preview (45).png" id="3_myf4l"]
-[ext_resource type="Texture2D" uid="uid://dwlfbd4s21elx" path="res://bucatarim/lapteidle.png" id="4_myf4l"]
-[ext_resource type="Script" uid="uid://bhs7q1dko6cw0" path="res://laptic.gd" id="5_p5a0g"]
 [ext_resource type="PackedScene" uid="uid://bx4acjkdktos7" path="res://button.tscn" id="6_gmb2m"]
+[ext_resource type="PackedScene" uid="uid://1bglwubkueqq" path="res://scrollmenu.tscn" id="8_myf4l"]
+[ext_resource type="PackedScene" uid="uid://wbbtbfvfmesm" path="res://coins.tscn" id="9_p5a0g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p5a0g"]
 animations = [{
@@ -30,9 +30,10 @@ size = Vector2(232.63895, 453.12503)
 [node name="BKG" type="Sprite2D" parent="."]
 position = Vector2(578.75, 331)
 scale = Vector2(1.7002945, 1.4755555)
-texture = ExtResource("1_6lah5")
+texture = ExtResource("1_8kdgp")
 
 [node name="vacuta" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(405, 432.00003)
 scale = Vector2(0.576, 0.576)
 sprite_frames = SubResource("SpriteFrames_p5a0g")
@@ -44,16 +45,20 @@ script = ExtResource("3_8kdgp")
 position = Vector2(-13.888855, -0.868103)
 shape = SubResource("RectangleShape2D_6lah5")
 
-[node name="laptic" type="Sprite2D" parent="."]
-position = Vector2(396, 472)
-scale = Vector2(0.5379404, 0.5379404)
-texture = ExtResource("4_myf4l")
-script = ExtResource("5_p5a0g")
-
 [node name="Button" parent="." instance=ExtResource("6_gmb2m")]
 offset_left = 26.00003
 offset_top = 24.0
 offset_right = 94.22583
 offset_bottom = 71.0
 
-[connection signal="ajunge" from="vacuta" to="laptic" method="_on_vacuta_ajunge"]
+[node name="Control" parent="." instance=ExtResource("8_myf4l")]
+offset_left = 794.0
+offset_top = 320.0
+offset_right = 794.0
+offset_bottom = 320.0
+
+[node name="Label" parent="." instance=ExtResource("9_p5a0g")]
+offset_left = 142.0
+offset_top = 28.0
+offset_right = 257.0
+offset_bottom = 99.0

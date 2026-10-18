@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cagxkxaasrc7f"]
+[gd_scene load_steps=13 format=3 uid="uid://cagxkxaasrc7f"]
 
 [ext_resource type="Texture2D" uid="uid://cvvx4wc8magoc" path="res://backgrounds/image-removebg-preview (42).png" id="1_sov4r"]
 [ext_resource type="Texture2D" uid="uid://c8ev0y4rudl4g" path="res://backgrounds/image-removebg-preview (43).png" id="2_t52yi"]
 [ext_resource type="Texture2D" uid="uid://bb26kfk0jqq8g" path="res://backgrounds/image-removebg-preview (40).png" id="3_cley8"]
 [ext_resource type="Texture2D" uid="uid://c7lgxapid8wpo" path="res://backgrounds/image-removebg-preview (41).png" id="4_4eegq"]
 [ext_resource type="Script" uid="uid://b0rlxdlks52b3" path="res://cookbook.gd" id="5_t52yi"]
+[ext_resource type="AudioStream" uid="uid://djfb5fqbx5ib2" path="res://game_c/creatorshome-select-003-337609.mp3" id="6_cley8"]
+[ext_resource type="AudioStream" uid="uid://bpk2of8hrscqf" path="res://game_c/oxidvideos-page-flip-smaller-page-453027.mp3" id="7_4eegq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nkfdu"]
 animations = [{
@@ -37,6 +39,9 @@ height = 56.638214
 radius = 12.883919
 height = 51.943054
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t52yi"]
+size = Vector2(228, 320)
+
 [node name="cookbook" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_nkfdu")
 script = ExtResource("5_t52yi")
@@ -61,4 +66,18 @@ position = Vector2(-209, 126)
 rotation = -0.72082096
 shape = SubResource("CapsuleShape2D_t52yi")
 
-[connection signal="mananca" from="." to="." method="_on_mananca"]
+[node name="areastg" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areastg"]
+position = Vector2(115, -8)
+shape = SubResource("RectangleShape2D_t52yi")
+debug_color = Color(0.7466132, 0.32694733, 0.82491636, 0.41960785)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_cley8")
+
+[node name="flip" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_4eegq")
+
+[connection signal="mouse_entered" from="areastg" to="." method="_on_areastg_mouse_entered"]
+[connection signal="mouse_exited" from="areastg" to="." method="_on_areastg_mouse_exited"]
